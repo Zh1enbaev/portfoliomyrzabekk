@@ -1,2 +1,0 @@
-# russianyazik
-site for information
