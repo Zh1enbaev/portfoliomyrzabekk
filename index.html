@@ -1,125 +1,199 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проблемы семьи и воспитания</title>
+    <title>Студент портфолиосы</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        /* Жалпы стиль */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-
-        header {
-            background-color: #4a90e2;
-            padding: 30px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            animation: fadeIn 2s ease-in-out;
-            letter-spacing: 2px;
-        }
-
-        .content {
-            padding: 40px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2em;
-            color: #4a90e2;
-            margin-top: 40px;
-            animation: fadeIn 1.5s ease-in-out;
-            border-bottom: 2px solid #4a90e2;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
+        body {
             color: #333;
-            max-width: 900px;
-            margin: 20px auto 40px;
-            opacity: 0;
-            animation: slideIn 1.5s ease-in-out forwards;
+            background-color: #f3f4f6;
         }
-
-        footer {
-            background-color: #4a90e2;
-            padding: 15px;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
             text-align: center;
-            color: white;
-            position: fixed;
+        }
+        header {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+            position: relative; /* Негізгі позицияны орнату */
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .menu {
+            position: absolute; /* Абсолютті позиция */
+            top: 20px;
+            right: 20px;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #3b82f6;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .cta:hover {
+            transform: scale(1.05);
+        }
+
+        /* Секция үшін иконкалар әлеуметтік желілер */
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        /* Иконкалар */
+        .icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        /* Секциялар */
+        section {
+            padding: 60px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+        section p {
+            font-size: 1em;
+            color: #4b5563;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Проекттер */
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .project {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .project img {
             width: 100%;
-            bottom: 0;
+            height: 200px; /* Установлен одинаковый размер для всех изображений */
+            object-fit: cover; /* Сохраняет пропорции изображений */
+        }
+        .project h3 {
+            padding: 15px;
+            font-size: 1.2em;
+            color: #1f2937;
+        }
+        .project:hover {
+            transform: scale(1.05);
         }
 
+        /* Анимациялар */
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateY(30px);
+            from {
                 opacity: 0;
+                transform: translateY(10px);
             }
-            100% {
-                transform: translateY(0);
+            to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Проблемы семьи и воспитания</h1>
+        <div class="container">
+            <h1>Сәлем мен Жиенбаев Мырзабек</h1>
+            <p>Абай атындағы қазақ ұлттық университетінің студенті</p>
+            <div class="menu">
+                <a href="#about">Мен туралы</a>
+                <a href="stranitsa2.html">Қызығушылықтарым</a>
+            </div>
+            <a href="#projects" class="cta">Білім алған орындары!</a>
+        </div>
     </header>
 
-    <div class="content">
-        <h2>1. Недостаток времени у родителей</h2>
-        <p>
-            Одной из основных проблем современных семей является недостаток времени для общения и взаимодействия с детьми. Родители часто заняты работой и домашними делами, что оставляет мало возможностей для качественного времени с детьми.
-        </p>
-        <p>
-            <strong>Решение:</strong> Планируйте семейное время заранее, организуйте общие активности, такие как игры, прогулки, совместное приготовление пищи. Старайтесь выделять время на общение каждый день, пусть это будет даже небольшое, но качественное время.
-        </p>
+    <section id="about">
+        <div class="container">
+            <h2>Мен туралы</h2>
+            <p>Мен 11 жасымнан бастап бағдарламалауға қызығамын және сол кезден бастап мен әртүрлі бағдарламарды зерттеп әлі күнге дейін өз білімімді арттырып жатырмын!</p>
+        </div>
+    </section>
 
-        <h2>2. Конфликты между родителями</h2>
-        <p>
-            Конфликты в семье могут сильно отражаться на детях, вызывая у них тревожность, чувство нестабильности и даже проблемы с поведением. Открытые ссоры и разногласия между родителями могут нарушить доверие и безопасность в семье.
-        </p>
-        <p>
-            <strong>Решение:</strong> Важно научиться решать конфликты мирно, с уважением друг к другу. Родителям стоит избегать споров при детях и работать над улучшением коммуникации внутри семьи. Консультации семейного психолога могут стать полезным шагом.
-        </p>
-
-        <h2>3. Влияние социальных сетей и технологий</h2>
-        <p>
-            С появлением технологий и социальных сетей многие дети стали проводить меньше времени с семьей и больше — в виртуальном мире. Это может влиять на их социальные навыки и эмоциональное развитие.
-        </p>
-        <p>
-            <strong>Решение:</strong> Устанавливайте разумные ограничения на использование гаджетов, поощряйте участие в семейных мероприятиях. Привлекайте детей к реальным занятиям, таким как спорт, творчество, чтение книг.
-        </p>
-
-        <h2>4. Стресс и эмоциональная усталость</h2>
-        <p>
-            Современная жизнь полна стрессов, и это отражается как на взрослых, так и на детях. Усталость может привести к эмоциональной отчужденности, раздражительности и снижению качества общения в семье.
-        </p>
-        <p>
-            <strong>Решение:</strong> Старайтесь поддерживать баланс между работой и личной жизнью. Не забывайте о времени для себя и отдыха. Совместное время с семьей должно приносить радость, а не быть источником стресса.
-        </p>
-    </div>
+    <section id="projects">
+        <div class="container">
+            <h2>Білім алған орталары</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="https://tumba.kz/uploads/images2017/mai/%D1%8007.jpg" alt="Проект 1">
+                    <h3>1-10 сыныпқа дейін білім алған ортасы</h3>
+                </div>
+                <div class="project">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFi0cRhdOijpBmGf5o1uvLAYBm9py5TLjsw&s" alt="Проект 2">
+                    <h3>11 сыныпта ҰБТға дайындалған ортасы</h3>
+                </div>
+                <div class="project">
+                    <img src="https://abaiuniversity.edu.kz/docs/aqparat/1107_5_1.jpg" alt="Проект 3">
+                    <h3>Қазіргі таңда білім алып жатқан ортасы, 1 курс</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        1 команда: Мырзабек, Нұржан, Бауыржан, Өмірбай, Бекасыл
+        <div class="container">
+            <p>&copy; 2024 Жиенбаев Мырзабек. KazNPU студенті.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/kan2ona/profilecard/?igsh=bXByamM1dmFucm05" target="_blank">
+                    <img src="https://icon2.cleanpng.com/20240112/qae/transparent-instagram-logo-image-black-background-white-square-no-1710926000850.webp" alt="Instagram" class="icon">
+                </a>
+                <a href="https://www.tiktok.com/@scwabb?_t=8qwHHjDjZWn&_r=1" target="_blank">
+                    <img src="https://freepnglogo.com/images/all_img/1691751275tiktok-logo-png-black-and-white.png" alt="TikTok" class="icon">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
